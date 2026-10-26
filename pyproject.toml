@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fixed-softmax-cross-entropy"
+version = "0.1.0"
+description = "Numerically corrected PyTorch softmax and cross-entropy functions"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["torch"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+viz = ["matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
